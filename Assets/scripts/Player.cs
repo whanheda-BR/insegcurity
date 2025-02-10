@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
   public float velocidade = 10f;
   public float focaPulo = 10f;
+  public float rebolardeladinho = 10f;
 
     public bool noChao = false;
   
@@ -57,14 +58,21 @@ public class Player : MonoBehaviour
          Debug.Log("RightArrow");
       }
 
-        if (Input.GetKeyDown(KeyCode.Space) ) //&& noChao == true
+        if (Input.GetKey/*Down*/(KeyCode.Space) ) //&& noChao == true
         {
             _rigidbody2D.AddForce(new Vector2(0, 1) * focaPulo,ForceMode2D.Impulse);
 
             Debug.Log("Jump");
         }
 
+         if (Input.GetKey(KeyCode.DownArrow) ) //&& noChao == true
+         {
+               _rigidbody2D.AddForce(new Vector2(0, 1) * rebolardeladinho,ForceMode2D.Impulse);
+
+            Debug.Log("Rebolar");
+         }
      
+
 
 
     }
