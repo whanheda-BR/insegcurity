@@ -6,6 +6,9 @@ public class Camera : MonoBehaviour
 {
     public Transform _alvo1;
     public Transform _alvo2;
+    public Transform _alvo3;
+    public Transform _alvo4;
+
 
     public float interpolacao = 12f;
     public SpriteRenderer _spriteRenderrer;
@@ -42,7 +45,7 @@ public class Camera : MonoBehaviour
                 CamMoveSpeed * Time.deltaTime);
             
         }
-        
+
         
         
     }
